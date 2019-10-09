@@ -12,5 +12,15 @@ public class Hotel {
     }
 
 
+    public String getHotelName() {
+        return this.hotelname;
+    }
+
+    public void addBedroom(Bedroom bedroom) {
+        if(bedroom.checkIsAvailable()) {
+            this.set.add(bedroom);
+        }
+    }
+
 
 }

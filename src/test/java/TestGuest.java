@@ -3,9 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestHotel {
-
-    private Hotel hotel;
+public class TestGuest {
 
     private Guest guest1;
     private Guest guest2;
@@ -16,7 +14,6 @@ public class TestHotel {
 
     @Before
     public void setUp() throws Exception {
-        hotel = new Hotel("Hotel MobSlice");
 
         guest1 = new Guest("Mary");
         guest2 = new Guest("Tarquinette");
@@ -25,10 +22,7 @@ public class TestHotel {
     }
 
     @Test
-    public void hotelHasName(){
-        assertEquals("Hotel MobSlice", hotel.getHotelName());
+    public void canCheckInGuest() {
+        assertEquals(true, checkIn());
     }
-
-
-
 }
